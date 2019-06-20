@@ -2,7 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Notifications;
+use App\Project;
+use App\RecivingGoods;
+use App\RequestedGoods;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -15,14 +22,39 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('home');
+        $category   = new Category();
+        $categories = $category->getLastFiveCategories();
+        $items      = $category->getLastSevenItems();
+        $totalItems = $category->getAllItemsCount();
+
+        $user = new User();
+        $users = $user->getCountAllUsers();
+
+        $reciving = new RecivingGoods();
+        $totalReciving = $reciving->totalReciving();
+
+        $requested = new RequestedGoods();
+        $totalRequested = $requested->totalRequested();
+
+        $notification = new Notifications();
+        $notifications = $notification->getUsersNotifications();
+        
+//        $notificationCount = $notification->countUnReadNotifications();
+
+        $project = new Project();
+        $projects = $project->getMyProjects();
+
+        $project = new Project();
+        $project->notifiyUserForIdleITems();
+
+
+        if(Auth::user()->user_type == 1001 || Auth::user()->user_type == 101 || Auth::user()->user_type == 2){
+            return view('home',compact('categories','items','users','totalReciving','notifications','totalItems','totalRequested'));
+        }
+        elseif(Auth::user()->user_type == 1 || Auth::user()->user_type == 3){
+            return view('projects/selectProject')->with('projects',$projects);
+        }
     }
 }

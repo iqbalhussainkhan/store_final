@@ -1,8 +1,6 @@
 
     <div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="kt_footer">
-        <div class="kt-footer__copyright">
-            2019&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Keenthemes</a>
-        </div>
+
         <div class="kt-footer__menu">
             <a href="#" target="_blank" class="kt-footer__menu-link kt-link">About</a>
             <a href="#" target="_blank" class="kt-footer__menu-link kt-link">Team</a>
@@ -21,19 +19,23 @@
 <!--begin::Global Theme Bundle(used by all pages) -->
 <script src="{{asset('assets/vendors/global/vendors.bundle.js')}}" type="text/javascript"></script>
 <script src="{{asset('assets/js/demo1/scripts.bundle.js')}}" type="text/javascript"></script>
-<!--end::Global Theme Bundle -->
+{{--<!--end::Global Theme Bundle -->--}}
 
 
 <!--begin::Page Vendors(used by this page) -->
 <script src="{{asset('assets/vendors/custom/fullcalendar/fullcalendar.bundle.js')}}" type="text/javascript"></script>
 <script src="{{asset('http://maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM')}}" type="text/javascript"></script>
-<script src="{{('assets/vendors/custom/gmaps/gmaps.js')}}" type="text/javascript"></script>
+<script src="{{asset('assets/vendors/custom/gmaps/gmaps.js')}}" type="text/javascript"></script>
 <!--end::Page Vendors -->
 
 
 
 <!--begin::Page Scripts(used by this page) -->
 <script src="{{asset('assets/js/demo1/pages/dashboard.js')}}" type="text/javascript"></script>
+
+    <script src="{{asset('assets/js/data_tables/vendors.bundle.js')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/js/data_tables/scripts.bundle.js')}}" type="text/javascript"></script>
+    {{--<script src="{{asset('assets/data-local.js')}}" type="text/javascript"></script>--}}
 <!--end::Page Scripts -->
 <!-- end::Body -->
 

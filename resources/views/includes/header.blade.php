@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8"/>
@@ -10,6 +9,8 @@
 
     <!--begin::Fonts -->
     <script src="{{asset('fonts/webfont.js')}}"></script>
+    {{--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--}}
+
     {{--{{ asset('js/app.js') }}--}}
     <script>
         WebFont.load({
@@ -27,16 +28,16 @@
 
 
     <!--begin::Global Theme Styles(used by all pages) -->
-    <link href="{{('assets/vendors/global/vendors.bundle.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{('assets/css/demo1/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/vendors/global/vendors.bundle.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/demo1/style.bundle.css')}}" rel="stylesheet" type="text/css" />
     <!--end::Global Theme Styles -->
 
     <!--begin::Layout Skins(used by all pages) -->
 
     <link href="{{asset('assets/css/demo1/skins/header/base/light.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{('assets/css/demo1/skins/header/menu/light.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{('assets/css/demo1/skins/brand/dark.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{('assets/css/demo1/skins/aside/dark.css')}}" rel="stylesheet" type="text/css" />        <!--end::Layout Skins -->
+    <link href="{{asset('assets/css/demo1/skins/header/menu/light.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/demo1/skins/brand/dark.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/demo1/skins/aside/dark.css')}}" rel="stylesheet" type="text/css" />        <!--end::Layout Skins -->
     <link rel="shortcut icon" href="{{('assets/media/logos/favicon.ico')}}" />
 
 </head>
