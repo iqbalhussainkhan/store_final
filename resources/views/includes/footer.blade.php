@@ -19,25 +19,7 @@
 <!--begin::Global Theme Bundle(used by all pages) -->
 <script src="{{asset('assets/vendors/global/vendors.bundle.js')}}" type="text/javascript"></script>
 <script src="{{asset('assets/js/demo1/scripts.bundle.js')}}" type="text/javascript"></script>
-{{--<!--end::Global Theme Bundle -->--}}
 
+@yield('footer')
 
-<!--begin::Page Vendors(used by this page) -->
-<script src="{{asset('assets/vendors/custom/fullcalendar/fullcalendar.bundle.js')}}" type="text/javascript"></script>
-<script src="{{asset('http://maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM')}}" type="text/javascript"></script>
-<script src="{{asset('assets/vendors/custom/gmaps/gmaps.js')}}" type="text/javascript"></script>
-<!--end::Page Vendors -->
-
-
-
-<!--begin::Page Scripts(used by this page) -->
-<script src="{{asset('assets/js/demo1/pages/dashboard.js')}}" type="text/javascript"></script>
-
-    <script src="{{asset('assets/js/data_tables/vendors.bundle.js')}}" type="text/javascript"></script>
-    <script src="{{asset('assets/js/data_tables/scripts.bundle.js')}}" type="text/javascript"></script>
-    {{--<script src="{{asset('assets/data-local.js')}}" type="text/javascript"></script>--}}
-<!--end::Page Scripts -->
-<!-- end::Body -->
-
-<!-- Mirrored from keenthemes.com/metronic/preview/demo1/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 09:26:34 GMT -->
 </html>

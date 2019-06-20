@@ -51,7 +51,7 @@ class HomeController extends Controller
 
 
         if(Auth::user()->user_type == 1001 || Auth::user()->user_type == 101 || Auth::user()->user_type == 2){
-            return view('home',compact('categories','items','users','totalReciving','notifications','totalItems','totalRequested'));
+            return view('users_homes.home',compact('categories','items','users','totalReciving','notifications','totalItems','totalRequested'));
         }
         elseif(Auth::user()->user_type == 1 || Auth::user()->user_type == 3){
             return view('projects/selectProject')->with('projects',$projects);
