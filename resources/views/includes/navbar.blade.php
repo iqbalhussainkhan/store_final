@@ -157,7 +157,7 @@
                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
                     <form>
                         <!--begin: Head -->
-                        <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url(assets/media/misc/bg-1.jpg)">
+                        <div class="kt-head kt-head--skin-dark kt-head--fit-x kt-head--fit-b" style="background-image: url({{asset('assets/media/misc/bg-1.jpg')}})">
                             <h3 class="kt-head__title">
                                 User Notifications
                                 &nbsp;
@@ -556,7 +556,7 @@
                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-xl">
                     <form>
                         <!--begin: Head -->
-                        <div class="kt-head kt-head--skin-dark" style="background-image: url(assets/media/misc/bg-1.jpg)">
+                        <div class="kt-head kt-head--skin-dark" style="background-image: url({{asset('assets/media/misc/bg-1.jpg')}})">
                             <h3 class="kt-head__title">
                                 User Quick Actions
                                 <span class="kt-space-15"></span>
@@ -639,7 +639,7 @@
                     <!--begin: Head -->
                     <div class="kt-user-card kt-user-card--skin-dark kt-notification-item-padding-x" style="background-image: url({{asset('assets/media/misc/bg-1.jpg')}})">
                         <div class="kt-user-card__avatar">
-                            <img class="kt-hidden" alt="Pic" src="assets/media/users/300_25.jpg" />
+                            <img class="kt-hidden" alt="Pic" src="{{asset('assets/media/users/300_25.jpg')}}" />
                             <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
                             <span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">{{strtoupper(substr(Auth::user()->name,0,1))}}</span>
                         </div>

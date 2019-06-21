@@ -185,9 +185,11 @@
         </div>
     </div>
     </div>
+    </div>
 
+@endsection
+@section('footer')
+    <script src="{{asset('assets/js/data_tables/data-local.js')}}" type="text/javascript"></script>
 
-        <script src="{{asset('assets/data_tables/data-local.js')}}" type="text/javascript"></script>
     {{--<script src="{{asset('js/categories/main.js')}}"></script>--}}
-
 @endsection
