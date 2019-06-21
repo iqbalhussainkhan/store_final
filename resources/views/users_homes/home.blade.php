@@ -1080,5 +1080,15 @@
         </div>
     </div>
     </div>
-        <!--End::Section--
 @endsection
+@section('footer')
+    <script src="{{asset('assets/vendors/custom/fullcalendar/fullcalendar.bundle.js')}}" type="text/javascript"></script>
+    <script src="{{asset('http://maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/vendors/custom/gmaps/gmaps.js')}}" type="text/javascript"></script>
+    <!--end::Page Vendors -->
+    <!--begin::Page Scripts(used by this page) -->
+    <script src="{{asset('assets/js/demo1/pages/dashboard.js')}}" type="text/javascript"></script>
+@endsection
+
+
+

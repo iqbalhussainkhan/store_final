@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8"/>
@@ -9,8 +10,6 @@
 
     <!--begin::Fonts -->
     <script src="{{asset('fonts/webfont.js')}}"></script>
-    {{--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>--}}
-
     {{--{{ asset('js/app.js') }}--}}
     <script>
         WebFont.load({
