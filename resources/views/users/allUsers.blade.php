@@ -16,11 +16,11 @@
                 <div class="kt-subheader__breadcrumbs">
                     <a href="#" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
                     <span class="kt-subheader__breadcrumbs-separator"></span>
-                    <a href="#" class="kt-subheader__breadcrumbs-link">Engineers</a>
+                    <a href="#" class="kt-subheader__breadcrumbs-link">All users</a>
                     <span class="kt-subheader__breadcrumbs-separator "></span>
 
 
-                    <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">Engineers List</span>
+                    <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">All users list</span>
                 </div>
 
             </div>
@@ -36,18 +36,8 @@
 				<i class="kt-font-brand flaticon2-user"></i>
 			</span>
                         <h3 class="kt-portlet__head-title">
-                            Store keepers list
+                            All users list
                         </h3>
-                    </div>
-                    <div class="kt-portlet__head-toolbar">
-                        <div class="kt-portlet__head-wrapper">
-                            <div class="kt-portlet__head-actions">
-                                <a href="{{asset('users/addEngineer')}}" class="btn btn-brand btn-elevate btn-icon-sm">
-                                    <i class="la la-plus"></i>
-                                    New Record
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -57,11 +47,12 @@
                         <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone No</th>
-                            <th>Address</th>
-                            <th>Actions</th>
+                            <th>NAME</th>
+                            <th>EMAIL</th>
+                            <th>PHONE NO</th>
+                            <th>ADDRESS</th>
+                            <th class="text-center">USER TYPE</th>
+                            {{--<th>ACTIONS</th>--}}
                         </tr>
                         </thead>
 
@@ -73,15 +64,26 @@
                                 <td class="main_td">{{$val->email }}</td>
                                 <td class="main_td">{{$val->phone_no }}</td>
                                 <td class="main_td">{{$val->address }}</td>
-
                                 <td class="text-center">
-                                    <a href="{{asset('users/addStoreKeeper/'.$val->id)}}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="edit user">
-                                        <i class="la la-edit "></i>
-                                    </a>
-                                    <a  href="#" onclick="deleteUser({{$val->id}})" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="delete user">
-                                        <i class="la la-trash "></i>
-                                    </a>
+                                    @if($val->user_type == 101)
+                                        <span class="btn btn-label-danger btn-pill"> store manager</span>
+                                    @elseif($val->user_type == 3)
+                                        <span class="btn btn-label-warning btn-pill">store keeper</span>
+                                    @elseif($val->user_type == 2)
+                                        <span class="btn btn-label-primary btn-pill">procurement</span>
+                                    @else
+                                        <span class="btn btn-label-success btn-pill">Engineer</span>
+                                    @endif
                                 </td>
+
+                                {{--<td class="text-center">--}}
+                                    {{--<a href="{{asset('users/addStoreKeeper/'.$val->id)}}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="edit user">--}}
+                                        {{--<i class="la la-edit "></i>--}}
+                                    {{--</a>--}}
+                                    {{--<a  href="#" onclick="deleteUser({{$val->id}})" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="delete user">--}}
+                                        {{--<i class="la la-trash "></i>--}}
+                                    {{--</a>--}}
+                                {{--</td>--}}
                             </tr>
                         @endforeach
 

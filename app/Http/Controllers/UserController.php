@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -93,10 +94,12 @@ class UserController extends Controller
         if(isset($request->user_id)){
             $data['user_id'] = $request->user_id;
             $user->updateUser($data);
+            Session(['success' => 'user updated successfully']);
         }
         else{
             $data['user_type'] = 1;
             $user->addUser($data);
+            Session(['success' => 'user added successfully']);
         }
 
 
@@ -139,6 +142,7 @@ class UserController extends Controller
     public function resetPassword($id){
         $user = new User();
         $user->resetPassword($id);
+        Session(['success' => 'password reset successfully']);
     }
 
     public function deleteUser($id){
@@ -149,7 +153,7 @@ class UserController extends Controller
             return redirect()->back()->with('error','Cant Delete User. Current User Pending Has Orders');
         }else{
             $user->deleteEngineer($id);
-            return redirect()->back()->with('success','User Deleted Successfully');
+            Session(['success' => 'user deleted successfully']);
         }
 
     }
@@ -184,6 +188,17 @@ class UserController extends Controller
             }
         }else{
             return redirect()->back()->with('error','Incorrect Old Password!');
+        }
+    }
+
+    public function allUsers(){
+        $user = new User();
+        $data = $user->getAllUsers();
+
+        if(Auth::user()->user_type == 1001 || Auth::user()->user_type == 2){
+            return view('users.allUsers')->with('data',$data);
+        }else{
+            return redirect('/home');
         }
     }
 }

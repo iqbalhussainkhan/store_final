@@ -426,7 +426,7 @@
                                         </span>
                                     </li>
                                     <li class="kt-menu__item " aria-haspopup="true" >
-                                        <a  href="{{asset('/users/engineers')}}" class="kt-menu__link ">
+                                        <a  href="{{asset('/users/addEngineer')}}" class="kt-menu__link ">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                 <span></span>
                                             </i><span class="kt-menu__link-text">Add New</span>
@@ -467,14 +467,14 @@
                                         </span>
                                     </li>
                                     <li class="kt-menu__item " aria-haspopup="true" >
-                                        <a  href="layout/subheader/toolbar.html" class="kt-menu__link ">
+                                        <a  href="{{asset('users/addStoreKeeper')}}" class="kt-menu__link ">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                 <span></span>
                                             </i><span class="kt-menu__link-text">Add New</span>
                                         </a>
                                     </li>
                                     <li class="kt-menu__item " aria-haspopup="true" >
-                                        <a  href="layout/subheader/actions.html" class="kt-menu__link ">
+                                        <a  href="{{asset('users/storeKeepers')}}" class="kt-menu__link ">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                 <span></span></i>
                                             <span class="kt-menu__link-text">View All</span>
@@ -508,7 +508,7 @@
                                         </span>
                                     </li>
                                     <li class="kt-menu__item " aria-haspopup="true" >
-                                        <a  href="layout/subheader/toolbar.html" class="kt-menu__link ">
+                                        <a  href="{{asset('users/allUsers')}}" class="kt-menu__link ">
                                             <i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                 <span></span>
                                             </i><span class="kt-menu__link-text">View All Users</span>
@@ -517,32 +517,8 @@
 
                                 </ul>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         </li>
 		            </ul>
                 </div>
             </div>
         </div>
-    </div>
-</div>

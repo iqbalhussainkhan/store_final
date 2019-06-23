@@ -4,6 +4,9 @@
  * @class KApp
  */
 
+
+
+
 var KTApp = function() {
     /** @type {object} colors State colors **/
     var colors = {};

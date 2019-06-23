@@ -60,6 +60,15 @@ class User extends Authenticatable
                 ->get();
         return $data;
     }
+
+//    public function getAllUsers(){
+//        $data = DB::table('users')
+//            ->where('user_type','!=',1001)
+//            ->select('id','name','email','phone_no','address','user_type')
+//            ->get();
+//        return $data;
+//    }
+
     public function getAllStoreKeepers(){
         $data = DB::table('users')
                 ->where('user_type', 3)

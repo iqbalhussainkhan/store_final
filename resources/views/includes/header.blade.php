@@ -36,7 +36,12 @@
     <link href="{{asset('assets/css/demo1/skins/header/base/light.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/css/demo1/skins/header/menu/light.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/css/demo1/skins/brand/dark.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('assets/css/demo1/skins/aside/dark.css')}}" rel="stylesheet" type="text/css" />        <!--end::Layout Skins -->
-    <link rel="shortcut icon" href="{{('assets/media/logos/favicon.ico')}}" />
+    <link href="{{asset('assets/css/demo1/skins/aside/dark.css')}}" rel="stylesheet" type="text/css" />
+    <script src="{{asset('assets/vendors/global/vendors.bundle.js')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/js/demo1/scripts.bundle.js')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/js/sweet_alert/sweetalert2.js')}}" type="text/javascript"></script><!--end::Layout Skins -->
+    {{--<link rel="shortcut icon" href="{{('assets/media/logos/favicon.ico')}}" />--}}
+
+
 
 </head>

@@ -63,6 +63,7 @@ Route::post('users/updatePassword', 'UserController@updatePassword');
 Route::post('users/saveEngineer', 'UserController@saveEngineer');
 Route::post('users/saveStoreKeeper', 'UserController@saveStoreKeeper');
 Route::get('users/resetPassword/{id}', 'UserController@resetPassword');
+Route::get('users/allUsers', 'UserController@allUsers');
 
 //////////////////////Requested Goods//////////////////////
 
